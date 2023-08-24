@@ -1,0 +1,40 @@
+[package]
+name = "cw-nft-reward-distribution"
+version = "0.1.0"
+authors = ["Racoon Supply <racoon.supply.nft@gmail.com>"]
+edition = "2021"
+
+exclude = [
+  "contract.wasm",
+  "hash.txt",
+]
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+backtraces = ["cosmwasm-std/backtraces"]
+library = []
+
+[dependencies]
+cosmwasm-schema         = "1.2.1"
+cosmwasm-std            = "1.2.1"
+sg-std                  = "2.3.1"
+cw-storage-plus         = "1.1.0"
+cw2                     = "1.1.0"
+schemars                = "0.8.11"
+serde                   = { version = "1.0.145", default-features = false, features = ["derive"] }
+thiserror               = "1.0.31"
+sg721-base              = "2.3.1"
+cw721                   = "0.17.0"
+anyhow                  = "1.0.57"
+sg2                     = "2.3.1"
+
+[dev-dependencies]
+sg4                     = "2.3.1"
+cw721-base              = "0.17.0"
+vending-factory         = "2.3.1"
+vending-minter          = "2.3.1"
+test-suite              = "2.3.1"
+sg-multi-test           = "2.3.1"
+cw-multi-test           = "0.16.2"
